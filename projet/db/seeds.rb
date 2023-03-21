@@ -16,6 +16,6 @@ CSV.foreach(Rails.root.join('lib/seed_csv/flights.csv'), headers: true) do |row|
                    business_class_seats: row['business_class_seats'].to_i,
                    economy_class_seats: row['economy_class_seats'].to_i,
                    departure_date: row['departure_date'].to_datetime,
-                   duration: row['duration'].to_i,
+                   arrival_date: row['arrival_date'].to_datetime + row['duration'].to_i.minutes,
                  } )
 end
