@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_04_11_144116) do
+ActiveRecord::Schema[7.0].define(version: 2023_04_11_151130) do
   create_table "admins", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -44,6 +44,19 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_11_144116) do
     t.index ["departure_airport_id"], name: "index_flights_on_departure_airport_id"
   end
 
+  create_table "reservations", force: :cascade do |t|
+    t.string "comfort_class"
+    t.string "status"
+    t.string "PNR"
+    t.integer "seats_count"
+    t.integer "user_id", null: false
+    t.integer "flight_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["flight_id"], name: "index_reservations_on_flight_id"
+    t.index ["user_id"], name: "index_reservations_on_user_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -58,4 +71,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_11_144116) do
 
   add_foreign_key "flights", "airports", column: "arrival_airport_id"
   add_foreign_key "flights", "airports", column: "departure_airport_id"
+  add_foreign_key "reservations", "flights"
+  add_foreign_key "reservations", "users"
 end

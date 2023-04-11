@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :reservations
   resources :flights
   resources :airports
   devise_for :admins

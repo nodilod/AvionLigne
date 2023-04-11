@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  comfort_class: MyString
+  status: MyString
+  PNR: MyString
+  seats_count: 1
+  user: one
+  flight: one
+
+two:
+  comfort_class: MyString
+  status: MyString
+  PNR: MyString
+  seats_count: 1
+  user: two
+  flight: two
