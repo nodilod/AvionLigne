@@ -14,10 +14,6 @@ class FlightsTest < ApplicationSystemTestCase
     visit flights_url
     click_on "New flight"
 
-    fill_in "Arrival date", with: @flight.arrival_date
-    fill_in "Business class seat", with: @flight.business_class_seat
-    fill_in "Departure date", with: @flight.departure_date
-    fill_in "Economic class seat", with: @flight.economic_class_seat
     click_on "Create Flight"
 
     assert_text "Flight was successfully created"
@@ -28,10 +24,6 @@ class FlightsTest < ApplicationSystemTestCase
     visit flight_url(@flight)
     click_on "Edit this flight", match: :first
 
-    fill_in "Arrival date", with: @flight.arrival_date
-    fill_in "Business class seat", with: @flight.business_class_seat
-    fill_in "Departure date", with: @flight.departure_date
-    fill_in "Economic class seat", with: @flight.economic_class_seat
     click_on "Update Flight"
 
     assert_text "Flight was successfully updated"

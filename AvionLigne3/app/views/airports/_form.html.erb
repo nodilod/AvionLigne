@@ -1,0 +1,32 @@
+<%= form_with(model: airport) do |form| %>
+  <% if airport.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(airport.errors.count, "error") %> prohibited this airport from being saved:</h2>
+
+      <ul>
+        <% airport.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :international_code, style: "display: block" %>
+    <%= form.text_field :international_code %>
+  </div>
+
+  <div>
+    <%= form.label :name, style: "display: block" %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div>
+    <%= form.label :city, style: "display: block" %>
+    <%= form.text_field :city %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
