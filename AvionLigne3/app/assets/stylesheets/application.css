@@ -13,3 +13,21 @@
  *= require_tree .
  *= require_self
  */
+
+header .logo {
+    margin-right: auto;
+}
+
+header .burger {
+    border: none;
+    background: none;
+    border-radius: 5px;
+    width: 50px;
+    height: 50px;
+}
+
+header .burger:hover {
+    background: lightgray;
+    transition: 0.3s;
+}
+
