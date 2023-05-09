@@ -14,6 +14,15 @@
  *= require_self
  */
 
+header {
+    background: #ffffff;
+    height: 55px;
+    border-radius: 0 0 50px 0;
+    display: flex;
+    align-items: center;
+    padding-right: 44px;
+}
+
 header .logo {
     margin-right: auto;
 }
@@ -22,12 +31,29 @@ header .burger {
     border: none;
     background: none;
     border-radius: 5px;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
 }
 
 header .burger:hover {
     background: lightgray;
     transition: 0.3s;
+}
+
+header .account {
+    border: none;
+    border-radius: 30px;
+    width: 40px;
+    height: 40px;
+    align-self: center;
+}
+
+header .menu, header .main {
+    width: 100%;
+}
+
+body {
+    margin: 0;
+    background: #f2f2f2;
 }
 
