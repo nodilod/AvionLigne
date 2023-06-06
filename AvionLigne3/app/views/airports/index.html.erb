@@ -11,4 +11,6 @@
   <% end %>
 </div>
 
-<%= link_to "New airport", new_airport_path %>
+<% if current_user.admin %>
+    <%= link_to "New airport", new_airport_path %>
+<% end %>

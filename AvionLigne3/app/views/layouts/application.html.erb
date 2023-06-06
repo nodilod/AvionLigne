@@ -18,9 +18,11 @@
         <a href="<%= index_index_url %>"><img src="/Logo.png" alt="LOGO" height="50px"></a>
       </div>
       <div class="menu" >
-        <a href="<%= airports_url %>">Les aéroports</a>
-        <a href="<%= flights_url %>">Les vols</a>
-        <a href="<%= reservations_url %>">Mes réservation</a>
+
+
+        <%= link_to "Les aéroports", airports_url %>
+        <%= link_to "Les vols", flights_url %>
+        <%= link_to "Mes réservations", reservations_url %>
 
         <% if user_signed_in? %>
           <a href="/users/sign_out">Déconnexion</a>

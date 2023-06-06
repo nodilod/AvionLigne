@@ -11,4 +11,6 @@
   <% end %>
 </div>
 
-<%= link_to "New flight", new_flight_path %>
+<% if current_user %>
+    <%= link_to "New flight", new_flight_path %>
+<% end %>
