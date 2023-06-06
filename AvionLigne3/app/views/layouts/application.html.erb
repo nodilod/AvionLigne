@@ -20,15 +20,15 @@
       <div class="menu" >
 
 
-        <%= link_to "Les aéroports", airports_url %>
-        <%= link_to "Les vols", flights_url %>
-        <%= link_to "Mes réservations", reservations_url %>
+        <%= link_to "Airports", airports_url %>
+        <%= link_to "Flights", flights_url %>
+        <%= link_to "Reservations", reservations_url %>
 
         <% if user_signed_in? %>
-          <a href="/users/sign_out">Déconnexion</a>
+          <a href="/users/logout">Logout</a>
         <% else %>
-          <a href="/users/sign_up">Inscription</a>
-          <a href="/users/sign_in">Connexion</a>
+          <a href="/users/sign_up">Sign up</a>
+          <a href="/users/sign_in">Sign in</a>
         <% end %>
       </div>
     </header>
