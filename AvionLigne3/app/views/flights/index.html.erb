@@ -9,6 +9,7 @@
       <%= link_to "Show this flight", flight %>
     </p>
   <% end %>
+  <%= paginate @flights %>
 </div>
 
 <% if current_user %>
