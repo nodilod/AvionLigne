@@ -22,3 +22,12 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+# TODO:
+
+- faire la recherche
+- faire les cards de vole pour la recherche
+- faire faire le détail des voles
+- faire la connexion
+- finaliser la création de vol? ou alors juste supprimer ou limiter l'accès 
+
