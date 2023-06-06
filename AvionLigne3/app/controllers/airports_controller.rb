@@ -1,6 +1,7 @@
 class AirportsController < ApplicationController
   before_action :set_airport, only: %i[ show edit update destroy ]
   before_action :authenticate_user!, except: %i[ index show ]
+  before_action :authenticate_admin!, except: %i[ index show ]
   # GET /airports or /airports.json
   def index
     @airports = Airport.all
