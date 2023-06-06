@@ -34,5 +34,5 @@ CSV.foreach(Rails.root.join('lib/seed_csv/users.csv'), headers: true) do |row|
                  email: row['email'],
                  encrypted_password: row['encrypted_password'],
                  role: row['roles']
-                 } )
+               } )
 end
