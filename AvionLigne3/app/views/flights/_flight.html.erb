@@ -1,24 +1,26 @@
+<div class="flight_number">
+  <h3><%= flight.number %></h3>
+</div>
+<div class="flight_details">
+  <p>
+    <strong>Business class seat:</strong>
+    <%= flight.business_class_seat %>
+  </p>
 
-  <div id="<%= dom_id flight %>" class="card flight">
-    <
-    <p>
-      <strong>Business class seat:</strong>
-      <%= flight.business_class_seat %>
-    </p>
+  <p>
+    <strong>Economic class seat:</strong>
+    <%= flight.economic_class_seat %>
+  </p>
 
-    <p>
-      <strong>Economic class seat:</strong>
-      <%= flight.economic_class_seat %>
-    </p>
+  <p>
+    <strong>Departure date:</strong>
+    <%= flight.departure_date %>
+  </p>
 
-    <p>
-      <strong>Departure date:</strong>
-      <%= flight.departure_date %>
-    </p>
+  <p>
+    <strong>Arrival date:</strong>
+    <%= flight.arrival_date %>
+  </p>
+</div>
 
-    <p>
-      <strong>Arrival date:</strong>
-      <%= flight.arrival_date %>
-    </p>
 
-  </div>

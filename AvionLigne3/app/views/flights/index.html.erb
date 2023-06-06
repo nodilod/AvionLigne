@@ -1,17 +1,19 @@
 <div id="flights">
-    <p style="color: green"><%= notice %></p>
+  <p style="color: green"><%= notice %></p>
 
-    <h1>Flights</h1>
+  <h1>Flights</h1>
 
 
-    <div id="flights-cards">
-      <% @flights.each do |flight| %>
+  <div id="flights-cards">
+    <% @flights.each do |flight| %>
+      <div id="<%= dom_id flight %>" class="card flight">
         <%= render flight %>
         <p>
           <%= link_to "Show this flight", flight %>
         </p>
-      <% end %>
-    </div>
+      </div>
+    <% end %>
+  </div>
 
-    <%= link_to "New flight", new_flight_path %>
+  <%= link_to "New flight", new_flight_path %>
 </div>
