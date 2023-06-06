@@ -12,6 +12,6 @@
   <%= paginate @flights %>
 </div>
 
-<% if current_user %>
+<% if current_user ? current_user.admin : false %>
     <%= link_to "New flight", new_flight_path %>
 <% end %>
