@@ -1,4 +1,4 @@
 email,encrypted_password,password,roles
 alice@gmail.com,$2a$12$/Ss.W9Ey2aN0cYxKuADjsuLQjSKaKKDEGUaO1aHP6Y..MPZ7o2LqS,azerty123,admin
-bob@gmail.com,$2a$12$h2js92542e3I.lz7Nnm/tuoaS3lbEBYV6vWdviZX5L9OKbVAtj1fO,1234,user
+bob@gmail.com,$2a$12$h2js92542e3I.lz7Nnm/tuoaS3lbEBYV6vWdviZX5L9OKbVAtj1fO,1234ze,user
 jack@gmail.com,$2a$12$L3UZBl4GojWdQDEW3soLPukAO6AuHSnCLcnYGIc11v6e1dh.cG0KO,azertyuio,user

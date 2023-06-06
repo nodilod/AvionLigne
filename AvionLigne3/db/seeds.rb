@@ -29,10 +29,11 @@ CSV.foreach(Rails.root.join('lib/seed_csv/flights.csv'), headers: true) do |row|
                  } )
 end
 
+
 CSV.foreach(Rails.root.join('lib/seed_csv/users.csv'), headers: true) do |row|
   User.create( {
                  email: row['email'],
-                 encrypted_password: row['encrypted_password'],
+                 password: row['password'],
                  role: row['roles']
                } )
 end
