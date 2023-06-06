@@ -63,6 +63,25 @@ body {
     padding: 10px;
 }
 
-main {
-    padding: 0 8% ;
+
+.card{
+    background: #EFEFEF;
+    border-radius: 8px;
+    padding: 15px;
 }
+
+#flights-cards{
+    width: 80%;
+    background: #666666;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+#flights{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+}
+
+
