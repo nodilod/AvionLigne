@@ -63,6 +63,47 @@ body {
     padding: 10px;
 }
 
-main {
-    padding: 0 8% ;
+.card{
+    background: #EFEFEF;
+    border-radius: 8px;
+    width: 40%;
+    margin-bottom: 20px;
 }
+
+#flights-cards{
+    width: 90%;
+    background: #4a8c98;
+    border-radius: 8px 8px 0px 0px;
+    padding: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+#flights{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+}
+
+.flight_number{
+    background: #c5ef71;
+    padding: 5px 15px 5px 15px;
+    color: white;
+    border-radius: 8px 8px 0px 0px;
+}
+
+.flight_details{
+    padding: 5px 15px 5px 15px;
+}
+
+.pagination{
+    width: 90%;
+    background: #4a8c98;
+    padding: 15px;
+    border-radius: 0px 0px 8px 8px;
+    display: flex;
+    justify-content: center;
+}
+

@@ -1,15 +1,26 @@
-<p style="color: green"><%= notice %></p>
-
-<h1>Flights</h1>
-
 <div id="flights">
-  <% @flights.each do |flight| %>
-    <%= render flight %>
-    <p>
-      <%= link_to "Show this flight", flight %>
-    </p>
+  <p style="color: green"><%= notice %></p>
+
+  <h1>Flights</h1>
+
+
+  <% if current_user %>
+    <%= link_to "New flight", new_flight_path %>
   <% end %>
-  <%= paginate @flights %>
+  <div id="flights-cards">
+    <% @flights.each do |flight| %>
+      <div class="card">
+        <%= render flight %>
+        <p>
+          <%= link_to "Show this flight", flight %>
+        </p>
+      </div>
+
+    <% end %>
+  </div>
+  <div class="pagination">
+    <%= paginate @flights %>
+  </div>
 </div>
 
 <% if current_user ? current_user.admin : false %>

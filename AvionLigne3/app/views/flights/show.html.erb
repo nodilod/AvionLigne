@@ -1,7 +1,40 @@
 <p style="color: green"><%= notice %></p>
+<div>
 
-<%= render @flight %>
+  <p>
+    <strong>Flight number:</strong>
+    <%= @flight.number %>
+  </p>
+  <p>
+    <strong>Business class seat:</strong>
+    <%= @flight.business_class_seat %>
+  </p>
 
+  <p>
+    <strong>Economic class seat:</strong>
+    <%= @flight.economic_class_seat %>
+  </p>
+
+  <p>
+    <strong>Departure date:</strong>
+    <%= @flight.departure_date %>
+  </p>
+
+  <p>
+    <strong>Arrival date:</strong>
+    <%= @flight.arrival_date %>
+  </p>
+
+  <p>
+    <strong>Arrival airport:</strong>
+    <%= @flight.arrival_airport.name %>
+  </p>
+
+  <p>
+    <strong>Departure airport:</strong>
+    <%= @flight.departure_airport.name  %>
+  </p>
+</div>
 <div>
   <%= link_to "Edit this flight", edit_flight_path(@flight) %> |
   <%= link_to "Back to flights", flights_path %>
