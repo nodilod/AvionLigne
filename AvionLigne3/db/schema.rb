@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_06_06_125926) do
+ActiveRecord::Schema[7.0].define(version: 2023_06_06_133714) do
   create_table "admins", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -40,6 +40,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_06_125926) do
     t.datetime "updated_at", null: false
     t.integer "arrival_airport_id"
     t.integer "departure_airport_id"
+    t.integer "number"
     t.index ["arrival_airport_id"], name: "index_flights_on_arrival_airport_id"
     t.index ["departure_airport_id"], name: "index_flights_on_departure_airport_id"
   end
