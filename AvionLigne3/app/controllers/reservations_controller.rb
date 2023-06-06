@@ -1,5 +1,7 @@
 class ReservationsController < ApplicationController
   before_action :set_reservation, only: %i[ show edit update destroy ]
+  before_action :authenticate_user!, except: %i[ index show ]
+
 
   # GET /reservations or /reservations.json
   def index
