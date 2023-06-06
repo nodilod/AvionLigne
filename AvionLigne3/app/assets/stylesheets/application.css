@@ -73,7 +73,7 @@ body {
 #flights-cards{
     width: 90%;
     background: #4a8c98;
-    border-radius: 8px;
+    border-radius: 8px 8px 0px 0px;
     padding: 15px;
     display: flex;
     flex-wrap: wrap;
@@ -94,8 +94,16 @@ body {
     border-radius: 8px 8px 0px 0px;
 }
 
-
 .flight_details{
     padding: 5px 15px 5px 15px;
+}
+
+.pagination{
+    width: 90%;
+    background: #4a8c98;
+    padding: 15px;
+    border-radius: 0px 0px 8px 8px;
+    display: flex;
+    justify-content: center;
 }
 
