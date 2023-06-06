@@ -3,6 +3,7 @@
 
     <h1>Flights</h1>
 
+
     <div id="flights-cards">
       <% @flights.each do |flight| %>
         <%= render flight %>
@@ -10,10 +11,9 @@
           <%= link_to "Show this flight", flight %>
         </p>
       <% end %>
-      <%= paginate @flights %>
     </div>
 
     <% if current_user %>
-    <%= link_to "New flight", new_flight_path %>
+      <%= link_to "New flight", new_flight_path %>
     <%end %>
 </div>
