@@ -10,12 +10,21 @@ require 'csv'
 
 CSV.foreach(Rails.root.join('lib/seed_csv/flights.csv'), headers: true) do |row|
   Flight.create( {
-                   number: row['number'],
-                   departure_airport: row['departure_airport'],
-                   arrival_airport: row['arrival_airport'],
+                   id: row['number'].to_i,
+                   departure_airport_id: row['departure_airport'].to_i,
+                   arrival_airport_id: row['arrival_airport'].to_i,
                    business_class_seats: row['business_class_seats'].to_i,
                    economy_class_seats: row['economy_class_seats'].to_i,
                    departure_date: row['departure_date'].to_datetime,
                    arrival_date: row['arrival_date'].to_datetime + row['duration'].to_i.minutes,
+                 } )
+end
+
+CSV.foreach(Rails.root.join('lib/seed_csv/airports.csv'), headers: true) do |row|
+  Airports.create( {
+                   id: row['airport_id'].to_i,
+                   international_code: row['international_code'],
+                   name: row['name'],
+                   city: row['city'],
                  } )
 end
